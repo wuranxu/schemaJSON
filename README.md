@@ -6,16 +6,17 @@ translate your json-schema data to json data, if you have set default value, it 
 
 # Get Started
 
-- install package
+### Install Package
 
-```
-go get github.com/wuranxu/schemaJSON
+  ```
+  go get github.com/wuranxu/schemaJSON
+ 
+  ```
 
-```
 
-- example
+### Example
 
-```
+```golang
 package main
 
 import (
@@ -69,5 +70,8 @@ func main() {
 	data2, err := s.Generate() // return interface{}
 	fmt.Println(data2, err)
 }
+
+// {"age":10,"class":[{"name":"math","score":120}],"name":"wuranxu"} <nil>
+// map[age:10 class:[map[name:math score:120]] name:wuranxu] <nil>
 
 ```
